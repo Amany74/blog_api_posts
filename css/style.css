@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#eee;
+}
+
+nav{
+    flex:1;
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+    border-radius:0 0 600px 0 ;
+}
+h1{
+    font-size: 3rem;
+    color:#6ba2c7;
+    padding: 20px 55px;
+ 
+}
+.items{
+    list-style: none;
+    flex:5;
+    background-color: rgb(255, 255, 255);
+    border-radius:10px;
+    margin:20px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+.itm a{
+    text-decoration:none;
+    display: block;
+    padding: 25px;
+    margin:10px;
+    color:black;
+    font-size:18px;
+    
+}
+
+a:hover {
+    color: #83adc9;
+}
+.container{
+    flex-wrap: wrap;
+    flex:5;
+    width: 75%;
+    height: auto;
+    /*  */
+}
+
+.subtitle{
+    font-size:25px;
+    color:rgb(49, 49, 49);
+    padding:30px 0px 0px 70px;
+    margin:10px;
+    display:inline-block;
+}
+#most-popular{
+    width: 95%;
+    margin:25px;
+    background-color: rgb(255, 255, 255,0.7);
+    border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+#most-popular-content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.posts{
+    width: 95%;
+    margin:30px 25px;
+    background-color: rgb(255, 255, 255,0.7);
+    border-radius: 10px;
+}
+.posts-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+
+.green{
+    color:rgb(55, 226, 55);
+    padding:10px;
+}
+.red{
+    color:rgb(252, 26, 26);
+    padding:10px;
+}
+
+
+
+
+
+
+/**************Flip Card Styles ************/
+
+img{
+    width: 100% ;
+    height: 100%;
+  }
+  .flip-card{
+  
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      padding: 1px;
+      margin: 30px;
+      display: inline-block;
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform  0.6s ;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      -webkit-transition: transform  0.3s ;
+      -moz-transition: transform  0.6s ;
+      -ms-transition: transform  0.6s ;
+      -o-transition: transform  0.6s ;
+  }
+    
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg) ;
+  } 
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .flip-card-front {
+      background-color: rgb(148, 146, 146);
+      color: black;
+    }
+    
+    .flip-card-back {
+      background-color: #83adc9;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+/*****************post style  ***************/
+.post-card{
+    background-color: rgba(226, 233, 255, 0.3);
+    display: inline-block;
+    margin:20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.post-card-name{
+color:#6ba2c7;
+padding:15px;
+}
+
+.post-card-title{
+padding:10px 20px;
+color:rgb(107, 107, 107);
+}
+
+.post-card-body{
+padding:30px;
+font-size: 1.3rem;
+color:rgb(78, 77, 77);
+}
+
+
+@media only screen and (min-width: 200px) and (max-width:700px) {
+    body {
+     flex-direction: column;
+    }
+    #most-popular-content{
+        display: grid;
+        grid-template-columns:  auto;
+    }
+  }
