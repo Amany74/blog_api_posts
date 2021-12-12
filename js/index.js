@@ -12,6 +12,12 @@ let posts = fetch('https://jsonplaceholder.typicode.com/posts')
 
 })
 
+var images = [
+    "https://images.unsplash.com/photo-1633113088092-3460c3c9b13f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" ,
+    "https://images.unsplash.com/photo-1633113212875-8ecf30ad2e81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" ,
+    "https://images.unsplash.com/photo-1633114127451-558041183c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+];
+
 function create_most_pop(json) {
     posts = json.slice(0,3);
     for(let i =0 ;i<3;i++) {
@@ -24,7 +30,7 @@ function create_most_pop(json) {
         d_i_f.classList.add('flip-card-front');
         d_i.appendChild(d_i_f);
         let img = document.createElement('img');
-        img.src = `../images/${i+3}.jpg`;
+        img.src = `${images[i]}`;
         d_i_f.appendChild(img);
         let d_i_b = document.createElement('div');
         d_i_b.classList.add('flip-card-back');
